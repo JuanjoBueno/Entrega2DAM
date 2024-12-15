@@ -1,0 +1,124 @@
+Entrega nº 2. Creación de componentes y orígenes de datos. Nivel medio.
+Esta práctica evalúa los resultados de aprendizaje: RA1, RA2, RA3, RA4.
+Diseña una aplicación multiplataforma usando React Nativo sin Framework (Bare React
+Native Proyect).
+1. Usando https://restcountries.com/#endpoints-all diseña una aplicación con Navigator.
+2. En la pantalla principal el usuario dispone de una lista de continentes a consultar
+(usa FlatList).
+3. Pulsando en los elementos de la lista se mostrará en una segunda pantalla una lista
+de países dentro de ese continente (nombre del país, capital, lengua y bandera).
+Usa FlatList, pero esta vez será necesario crear un componente reutilizable.
+4. Pulsando en cada uno de los países de las lista se accederá a otra pantalla dónde
+se puede consultar algo de información (algunos datos más) y su localización en
+https://www.openstreetmap.org/ usando
+https://github.com/enieber/react-native-open-street-map o algún componente similar.
+5. Prepara las pantallas para poder volver a la pantalla inicial en cualquier momento.
+6. Usa contextos y hooks según creas necesario (Es posible usar Redux con Query si
+lo ves adecuado).
+7. Cuida el diseño de la aplicación e incorpora un modo claro y oscuro.
+La práctica será entregada a través de Moodle el día 13 de diciembre de 2024 en horas de
+clase, para la entrega se usará un documento pdf con un link al proyecto en github.
+Criterios de evaluación.
+1. Esquema de Navegación (20 puntos)
+● 20 puntos: La aplicación usa React Navigation correctamente, con una
+estructura de navegación adecuada entre las pantallas principales:
+○ Pantalla de Continentes.
+○ Pantalla de Países dentro de un Continente.
+○ Pantalla de Detalles de un País. La navegación es fluida, sin errores, y las
+pantallas pueden accederse y volver entre sí sin problemas.
+● 15 puntos: La navegación está implementada correctamente, pero con algunas
+transiciones o rutas confusas. Puede faltar una navegación más clara o eficiente
+entre algunas pantallas.
+● 10 puntos: Se implementa una navegación básica, pero hay problemas de
+estructura o la implementación no es coherente con las pantallas requeridas.
+● 0 puntos: No se implementa un esquema de navegación o la navegación no
+funciona correctamente.
+2. Implementación de Listas con FlatList (20 puntos)
+● 20 puntos: Se usan correctamente FlatList para mostrar:
+○ Una lista de continentes en la pantalla principal.
+○ Una lista de países dentro de un continente en la segunda pantalla.
+○ La lista de detalles del país en la tercera pantalla. Las listas cargan de
+manera eficiente y son dinámicas, manejando grandes cantidades de datos
+sin problemas de rendimiento.
+● 15 puntos: Las listas funcionan, pero pueden tener pequeños problemas de
+rendimiento, como retrasos en el renderizado o un manejo ineficiente de los datos.
+● 10 puntos: Las listas se muestran, pero no se aprovecha correctamente FlatList
+para la paginación o el rendimiento no es óptimo.
+● 0 puntos: No se implementan listas o las listas no cargan correctamente los datos.
+3. Componente Reutilizable para los Países (15 puntos)
+● 15 puntos: Se crea un componente reutilizable que recibe las propiedades
+necesarias (nombre, capital, lengua, bandera) para mostrar la información de
+los países. El componente es flexible, reutilizable en distintas pantallas.
+● 10 puntos: El componente es reutilizable, pero la implementación podría ser más
+modular o las propiedades podrían ser más flexibles.
+● 5 puntos: El componente es estático o no se reutiliza correctamente en todas las
+pantallas.
+● 0 puntos: No se implementa un componente reutilizable o la reutilización no es
+eficiente.
+4. Integración con la API de RestCountries (15 puntos)
+● 15 puntos: Se realiza una correcta integración con la API de RestCountries. Los
+datos de los continentes, países y detalles se cargan de manera efectiva, y el
+manejo de errores es adecuado en caso de fallos en la API.
+● 10 puntos: La integración funciona correctamente, pero hay algunos problemas
+menores como falta de manejo de errores o datos mal presentados.
+● 5 puntos: La integración con la API no está completa o tiene errores importantes al
+cargar los datos de los países.
+● 0 puntos: No se integra correctamente la API o no se obtiene la información
+necesaria.
+5. Visualización en OpenStreetMap (10 puntos)
+● 10 puntos: Se muestra correctamente la ubicación de cada país en OpenStreetMap
+usando react-native-open-street-map o un componente similar. La localización se
+carga de manera eficiente y es precisa.
+● 7 puntos: La localización se muestra, pero hay algunos problemas de carga o
+precisión en el mapa.
+● 4 puntos: La integración con OpenStreetMap está parcialmente implementada o no
+se muestra correctamente la ubicación del país.
+● 0 puntos: No se implementa la visualización del mapa o la localización no funciona.
+6. Diseño Claro y Oscuro (10 puntos)
+● 10 puntos: La aplicación implementa correctamente un modo claro y oscuro (usa un
+esquema parecido al que viene por defecto en tu proyecto). El diseño es atractivo y
+adecuado para ambos modos, garantizando una experiencia de usuario fluida en
+todos los contextos.
+● 7 puntos: El modo claro y oscuro está implementado, pero la transición no es
+completamente fluida o el diseño en alguno de los modos es deficiente.
+● 4 puntos: El modo claro y oscuro está implementado de manera parcial, o el diseño
+no se ajusta adecuadamente a las condiciones de cada modo.
+● 0 puntos: No se implementa el modo claro y oscuro.
+7. Uso de Contextos y/o Hooks (10 puntos)
+● 10 puntos: Se hace un uso adecuado de React Context y/o Hooks para
+gestionar el estado de la aplicación de manera eficiente (por ejemplo, para manejar
+la selección de un continente o país, o el modo claro/oscuro). La aplicación es fluida
+y el manejo del estado es efectivo.
+● 7 puntos: El uso de hooks y contextos es adecuado, pero hay margen para mejorar
+la eficiencia o la organización del estado.
+● 4 puntos: El uso de hooks o contextos es limitado o innecesario, y el manejo del
+estado no es del todo claro.
+● 0 puntos: No se usan contextos o hooks adecuadamente, lo que hace que la
+gestión del estado sea desorganizada.
+8. Diseño y Estilo (10 puntos)
+● 10 puntos: La aplicación tiene un diseño moderno y coherente. La interfaz es
+atractiva, fácil de usar, y tiene una experiencia de usuario fluida en todas las
+pantallas. Se cuidan detalles como márgenes, tipografía, y colores.
+● 7 puntos: El diseño es funcional, pero le falta pulido o algunos detalles que mejoren
+la experiencia de usuario.
+● 4 puntos: El diseño es básico, con elementos mal alineados o poco atractivos.
+● 0 puntos: El diseño es deficiente o la interfaz de usuario no es funcional.
+9. Manejo de Estado y Optimización (5 puntos)
+● 5 puntos: La aplicación maneja eficientemente el estado (especialmente al consumir
+la API) y presenta un rendimiento fluido, incluso cuando se muestran grandes
+cantidades de datos (como listas de países o continentes).
+● 3 puntos: El manejo del estado es adecuado, pero se pueden notar pequeños
+retrasos o problemas de rendimiento al cargar datos.
+● 1 punto: Hay problemas importantes de rendimiento al manejar grandes cantidades
+de datos o al hacer peticiones a la API.
+● 0 puntos: La aplicación presenta problemas de rendimiento graves o no maneja el
+estado de manera eficiente.
+10. Documentación y Código Limpio (5 puntos)
+● 5 puntos: El código está bien organizado y limpio, siguiendo buenas prácticas de
+desarrollo. Cada componente y función está documentado adecuadamente, y la
+estructura del proyecto es clara y comprensible.
+● 3 puntos: El código está organizado, pero podría beneficiarse de una mejor
+documentación o una estructura más clara.
+● 1 punto: El código está desordenado y falta documentación.
+● 0 puntos: El código no está documentado y es difícil de entender o seguir.
+Puntuación Total: 100 puntos
